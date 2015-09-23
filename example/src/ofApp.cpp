@@ -76,8 +76,10 @@ void ofApp::draw()
     }
     
     ofSetColor( 255 );
-    ofDrawBitmapString( "TotalTime   : " + ofToString( totalTime ), 20, 20 );
-    ofDrawBitmapString( "CurrentTime : " + ofToString( time, 3 ), 20, 40 );
+    ofDrawBitmapString( "OF_KEY_DOWN : TotalTime -= 0.1", 20, 20 );
+    ofDrawBitmapString( "OF_KEY_UP   : TotalTime += 0.1", 20, 40 );
+    ofDrawBitmapString( "TotalTime   : " + ofToString( totalTime ), 20, 60 );
+    ofDrawBitmapString( "CurrentTime : " + ofToString( time, 3 ), 20, 80 );
 }
 
 
@@ -86,13 +88,13 @@ void ofApp::draw()
 ////////////////////////////////////////
 void ofApp::keyPressed( int key )
 {
-    if( key == '-' )
+    if( key == OF_KEY_DOWN )
     {
         totalTime = CLAMP( totalTime - 0.1, 0.5, 3.0 );
         time      = 0;
         startTime = ofGetElapsedTimef();
     }
-    if( key == '=' )
+    if( key == OF_KEY_UP )
     {
         totalTime = CLAMP( totalTime + 0.1, 0.5, 3.0 );
         time      = 0;
