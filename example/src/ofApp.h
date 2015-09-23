@@ -25,10 +25,6 @@ public:
     void windowResized( int w, int h );
     
     
-    int w, h;
-    float halfWidth, halfHeight;
-    
-    
     float time;
     float startTime;
     float totalTime;

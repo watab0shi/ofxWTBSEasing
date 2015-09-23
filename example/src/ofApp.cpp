@@ -20,14 +20,6 @@ string eNames[] = { "QUAD_IN", "QUAD_OUT", "QUAD_INOUT",
 ////////////////////////////////////////
 void ofApp::setup()
 {
-    //---------------------------------------- basic variables
-    w = ofGetWidth();
-    h = ofGetHeight();
-    
-    halfWidth  = ( float )w / 2.0f;
-    halfHeight = ( float )h / 2.0f;
-    
-    
     time      = 0;
     startTime = ofGetElapsedTimef();
     totalTime = 1.0;
@@ -56,7 +48,8 @@ void ofApp::update()
 ////////////////////////////////////////
 void ofApp::draw()
 {
-    float sz  = ( float )h / NUM_EASINGS;
+    float hw = ( float )ofGetWidth() / 2;
+    float sz = ( float )ofGetHeight() / NUM_EASINGS;
     
     for( int i = 0; i < NUM_EASINGS; ++i )
     {
@@ -65,14 +58,14 @@ void ofApp::draw()
         ( i % 2 == 0 ) ? ofSetColor( 255 ): ofSetColor( 128 );
         
         ofFill();
-        ofRect( ( halfWidth / 2 ), sz * i, val * halfWidth, sz );
+        ofRect( ( hw / 2 ), sz * i, val * hw, sz );
         
         ofNoFill();
         ofSetColor( 255 );
-        ofRect( ( halfWidth / 2 ), sz * i, halfWidth, sz );
+        ofRect( ( hw / 2 ), sz * i, hw, sz );
         
         ofSetColor( 0 );
-        ofDrawBitmapString( eNames[ i ], ( halfWidth / 2 ) + 10, sz * ( i + 1 ) - 2 );
+        ofDrawBitmapString( eNames[ i ], ( hw / 2 ) + 10, sz * ( i + 1 ) - 2 );
     }
     
     ofSetColor( 255 );
