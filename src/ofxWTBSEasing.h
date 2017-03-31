@@ -6,138 +6,118 @@
 
 #define NUM_EASINGS 31
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 // Easing
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//--------------------------------------------------------------------------------
 namespace Easing
 {
-    enum easingMode
-    {
-        EASING_IN_QUAD = 0,
-        EASING_OUT_QUAD,
-        EASING_INOUT_QUAD,
-        
-        EASING_IN_CUBIC,
-        EASING_OUT_CUBIC,
-        EASING_INOUT_CUBIC,
-        
-        EASING_IN_QUART,
-        EASING_OUT_QUART,
-        EASING_INOUT_QUART,
-        
-        EASING_IN_QUINT,
-        EASING_OUT_QUINT,
-        EASING_INOUT_QUINT,
-        
-        EASING_IN_SINE,
-        EASING_OUT_SINE,
-        EASING_INOUT_SINE,
-        
-        EASING_IN_EXPO,
-        EASING_OUT_EXPO,
-        EASING_INOUT_EXPO,
-        
-        EASING_IN_CIRC,
-        EASING_OUT_CIRC,
-        EASING_INOUT_CIRC,
-        
-        EASING_IN_ELASTIC,
-        EASING_OUT_ELASTIC,
-        EASING_INOUT_ELASTIC,
-        
-        EASING_IN_BACK,
-        EASING_OUT_BACK,
-        EASING_INOUT_BACK,
-        
-        EASING_IN_BOUNCE,
-        EASING_OUT_BOUNCE,
-        EASING_INOUT_BOUNCE,
-        
-        EASING_LINEAR,
-    };
+  enum easingMode
+  {
+    EASE_IN_QUAD = 0,
+    EASE_OUT_QUAD,
+    EASE_INOUT_QUAD,
     
-    double easing( easingMode m, double t, double totaltime, double max = 1.0, double min = 0.0 );
+    EASE_IN_CUBIC,
+    EASE_OUT_CUBIC,
+    EASE_INOUT_CUBIC,
     
-    // Quad
-    double InQuad( double t, double totaltime, double max = 1.0, double min = 0.0 );
+    EASE_IN_QUART,
+    EASE_OUT_QUART,
+    EASE_INOUT_QUART,
     
-    double OutQuad( double t, double totaltime, double max = 1.0, double min = 0.0 );
+    EASE_IN_QUINT,
+    EASE_OUT_QUINT,
+    EASE_INOUT_QUINT,
     
-    double InOutQuad( double t, double totaltime, double max = 1.0, double min = 0.0 );
+    EASE_IN_SINE,
+    EASE_OUT_SINE,
+    EASE_INOUT_SINE,
     
+    EASE_IN_EXPO,
+    EASE_OUT_EXPO,
+    EASE_INOUT_EXPO,
     
-    // Cubic
-    double InCubic( double t, double totaltime, double max = 1.0, double min = 0.0 );
+    EASE_IN_CIRC,
+    EASE_OUT_CIRC,
+    EASE_INOUT_CIRC,
     
-    double OutCubic( double t, double totaltime, double max = 1.0, double min = 0.0 );
+    EASE_IN_ELASTIC,
+    EASE_OUT_ELASTIC,
+    EASE_INOUT_ELASTIC,
     
-    double InOutCubic( double t, double totaltime, double max = 1.0, double min = 0.0 );
+    EASE_IN_BACK,
+    EASE_OUT_BACK,
+    EASE_INOUT_BACK,
     
+    EASE_IN_BOUNCE,
+    EASE_OUT_BOUNCE,
+    EASE_INOUT_BOUNCE,
     
-    // Quart
-    double InQuart( double t, double totaltime, double max = 1.0, double min = 0.0 );
-    
-    double OutQuart( double t, double totaltime, double max = 1.0, double min = 0.0 );
-    
-    double InOutQuart( double t, double totaltime, double max = 1.0, double min = 0.0 );
-    
-    
-    // Quint
-    double InQuint( double t, double totaltime, double max = 1.0, double min = 0.0 );
-    
-    double OutQuint( double t, double totaltime, double max = 1.0, double min = 0.0 );
-    
-    double InOutQuint( double t, double totaltime, double max = 1.0, double min = 0.0 );
-    
-    
-    // Sine
-    double InSine( double t, double totaltime, double max = 1.0, double min = 0.0 );
-    
-    double OutSine( double t, double totaltime, double max = 1.0, double min = 0.0 );
-    
-    double InOutSine( double t, double totaltime, double max = 1.0, double min = 0.0 );
-    
-    
-    // Expo
-    double InExpo( double t, double totaltime, double max = 1.0, double min = 0.0 );
-    
-    double OutExpo( double t, double totaltime, double max = 1.0, double min = 0.0 );
-    
-    double InOutExpo( double t, double totaltime, double max = 1.0, double min = 0.0 );
-    
-    
-    // Circ
-    double InCirc( double t, double totaltime, double max = 1.0, double min = 0.0 );
-    
-    double OutCirc( double t, double totaltime, double max = 1.0, double min = 0.0 );
-    
-    double InOutCirc( double t, double totaltime, double max = 1.0, double min = 0.0 );
-    
-    
-    // Elastic
-    double InElastic( double t, double totaltime, double max = 1.0, double min = 0.0 );
-    
-    double OutElastic( double t, double totaltime, double max = 1.0, double min = 0.0 );
-    
-    double InOutElastic( double t, double totaltime, double max = 1.0, double min = 0.0 );
-    
-    
-    // Back
-    double InBack( double t, double totaltime, double max, double min, double s );
-    
-    double OutBack( double t, double totaltime, double max, double min, double s );
-    
-    double InOutBack( double t, double totaltime, double max, double min, double s );
-    
-    
-    // Bounce
-    double InBounce( double t, double totaltime, double max = 1.0, double min = 0.0 );
-    
-    double OutBounce( double t, double totaltime, double max = 1.0, double min = 0.0 );
-    
-    double InOutBounce( double t, double totaltime, double max = 1.0, double min = 0.0 );
-    
-    
-    // Linear
-    double Linear( double t, double totaltime, double max = 1.0, double min = 0.0 );
+    EASE_LINEAR,
+  };
+  
+  float easing( easingMode m, float t, float totaltime, float max = 1.0, float min = 0.0 );
+  
+  // Quad
+  float InQuad( float t, float totaltime, float max = 1.0, float min = 0.0 );
+  float OutQuad( float t, float totaltime, float max = 1.0, float min = 0.0 );
+  float InOutQuad( float t, float totaltime, float max = 1.0, float min = 0.0 );
+  
+  
+  // Cubic
+  float InCubic( float t, float totaltime, float max = 1.0, float min = 0.0 );
+  float OutCubic( float t, float totaltime, float max = 1.0, float min = 0.0 );
+  float InOutCubic( float t, float totaltime, float max = 1.0, float min = 0.0 );
+  
+  
+  // Quart
+  float InQuart( float t, float totaltime, float max = 1.0, float min = 0.0 );
+  float OutQuart( float t, float totaltime, float max = 1.0, float min = 0.0 );
+  float InOutQuart( float t, float totaltime, float max = 1.0, float min = 0.0 );
+  
+  
+  // Quint
+  float InQuint( float t, float totaltime, float max = 1.0, float min = 0.0 );
+  float OutQuint( float t, float totaltime, float max = 1.0, float min = 0.0 );
+  float InOutQuint( float t, float totaltime, float max = 1.0, float min = 0.0 );
+  
+  
+  // Sine
+  float InSine( float t, float totaltime, float max = 1.0, float min = 0.0 );
+  float OutSine( float t, float totaltime, float max = 1.0, float min = 0.0 );
+  float InOutSine( float t, float totaltime, float max = 1.0, float min = 0.0 );
+  
+  
+  // Expo
+  float InExpo( float t, float totaltime, float max = 1.0, float min = 0.0 );
+  float OutExpo( float t, float totaltime, float max = 1.0, float min = 0.0 );
+  float InOutExpo( float t, float totaltime, float max = 1.0, float min = 0.0 );
+  
+  
+  // Circ
+  float InCirc( float t, float totaltime, float max = 1.0, float min = 0.0 );
+  float OutCirc( float t, float totaltime, float max = 1.0, float min = 0.0 );
+  float InOutCirc( float t, float totaltime, float max = 1.0, float min = 0.0 );
+  
+  
+  // Elastic
+  float InElastic( float t, float totaltime, float max = 1.0, float min = 0.0 );
+  float OutElastic( float t, float totaltime, float max = 1.0, float min = 0.0 );
+  float InOutElastic( float t, float totaltime, float max = 1.0, float min = 0.0 );
+  
+  
+  // Back
+  float InBack( float t, float totaltime, float max, float min, float s );
+  float OutBack( float t, float totaltime, float max, float min, float s );
+  float InOutBack( float t, float totaltime, float max, float min, float s );
+  
+  
+  // Bounce
+  float InBounce( float t, float totaltime, float max = 1.0, float min = 0.0 );
+  float OutBounce( float t, float totaltime, float max = 1.0, float min = 0.0 );
+  float InOutBounce( float t, float totaltime, float max = 1.0, float min = 0.0 );
+  
+  
+  // Linear
+  float Linear( float t, float totaltime, float max = 1.0, float min = 0.0 );
 }

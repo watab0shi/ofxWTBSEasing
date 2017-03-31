@@ -3,550 +3,613 @@
 #include "ofxWTBSEasing.h"
 
 
-
-double Easing::easing( easingMode m, double t, double totaltime, double max, double min )
+// easing
+//----------------------------------------
+float Easing::easing( easingMode _m, float _t, float _totalTime, float _max, float _min )
 {
-    // Quad
-    if( m == EASING_IN_QUAD )
-    {
-        return InQuad( t, totaltime, max, min );
-    }
-    else if( m == EASING_OUT_QUAD )
-    {
-        return OutQuad( t, totaltime, max, min );
-    }
-    else if( m == EASING_INOUT_QUAD )
-    {
-        return InOutQuad( t, totaltime, max, min );
-    }
-    
-    // Cubic
-    else if( m == EASING_IN_CUBIC )
-    {
-        return InCubic( t, totaltime, max, min );
-    }
-    else if( m == EASING_OUT_CUBIC )
-    {
-        return OutCubic( t, totaltime, max, min );
-    }
-    else if( m == EASING_INOUT_CUBIC )
-    {
-        return InOutCubic( t, totaltime, max, min );
-    }
-    
-    // Quart
-    else if( m == EASING_IN_QUART )
-    {
-        return InQuart( t, totaltime, max, min );
-    }
-    else if( m == EASING_OUT_QUART )
-    {
-        return OutQuart( t, totaltime, max, min );
-    }
-    else if( m == EASING_INOUT_QUART )
-    {
-        return InOutQuart( t, totaltime, max, min );
-    }
-    
-    // Quint
-    else if( m == EASING_IN_QUINT )
-    {
-        return InQuint( t, totaltime, max, min );
-    }
-    else if( m == EASING_OUT_QUINT )
-    {
-        return OutQuint( t, totaltime, max, min );
-    }
-    else if( m == EASING_INOUT_QUINT )
-    {
-        return InOutQuint( t, totaltime, max, min );
-    }
-    
-    // Sine
-    else if( m == EASING_IN_SINE )
-    {
-        return InSine( t, totaltime, max, min );
-    }
-    else if( m == EASING_OUT_SINE )
-    {
-        return OutSine( t, totaltime, max, min );
-    }
-    else if( m == EASING_INOUT_SINE )
-    {
-        return InOutSine( t, totaltime, max, min );
-    }
-    
-    // Expo
-    else if( m == EASING_IN_EXPO )
-    {
-        return InExpo( t, totaltime, max, min );
-    }
-    else if( m == EASING_OUT_EXPO )
-    {
-        return OutExpo( t, totaltime, max, min );
-    }
-    else if( m == EASING_INOUT_EXPO )
-    {
-        return InOutExpo( t, totaltime, max, min );
-    }
-    
-    // Circ
-    else if( m == EASING_IN_CIRC )
-    {
-        return InCirc( t, totaltime, max, min );
-    }
-    else if( m == EASING_OUT_CIRC )
-    {
-        return OutCirc( t, totaltime, max, min );
-    }
-    else if( m == EASING_INOUT_CIRC )
-    {
-        return InOutCirc( t, totaltime, max, min );
-    }
-    
-    // Elastic
-    else if( m == EASING_IN_ELASTIC )
-    {
-        return InElastic( t, totaltime, max, min );
-    }
-    else if( m == EASING_OUT_ELASTIC )
-    {
-        return OutElastic( t, totaltime, max, min );
-    }
-    else if( m == EASING_INOUT_ELASTIC )
-    {
-        return InOutElastic( t, totaltime, max, min );
-    }
-    
-    // Back
-    else if( m == EASING_IN_BACK )
-    {
-        return InBack( t, totaltime, max, min, 1.70158 );
-    }
-    else if( m == EASING_OUT_BACK )
-    {
-        return OutBack( t, totaltime, max, min, 1.70158 );
-    }
-    else if( m == EASING_INOUT_BACK )
-    {
-        return InOutBack( t, totaltime, max, min, 1.70158 );
-    }
-    
-    // Bounce
-    else if( m == EASING_IN_BOUNCE )
-    {
-        return InBounce( t, totaltime, max, min );
-    }
-    else if( m == EASING_OUT_BOUNCE )
-    {
-        return OutBounce( t, totaltime, max, min );
-    }
-    else if( m == EASING_INOUT_BOUNCE )
-    {
-        return InOutBounce( t, totaltime, max, min );
-    }
-    
-    // Linear
-    else if( m == EASING_LINEAR )
-    {
-        return Linear( t, totaltime, max, min );
-    }
+  // Quad
+  if( _m == EASE_IN_QUAD )
+  {
+    return InQuad( _t, _totalTime, _max, _min );
+  }
+  else if( _m == EASE_OUT_QUAD )
+  {
+    return OutQuad( _t, _totalTime, _max, _min );
+  }
+  else if( _m == EASE_INOUT_QUAD )
+  {
+    return InOutQuad( _t, _totalTime, _max, _min );
+  }
+  
+  // Cubic
+  else if( _m == EASE_IN_CUBIC )
+  {
+    return InCubic( _t, _totalTime, _max, _min );
+  }
+  else if( _m == EASE_OUT_CUBIC )
+  {
+    return OutCubic( _t, _totalTime, _max, _min );
+  }
+  else if( _m == EASE_INOUT_CUBIC )
+  {
+    return InOutCubic( _t, _totalTime, _max, _min );
+  }
+  
+  // Quart
+  else if( _m == EASE_IN_QUART )
+  {
+    return InQuart( _t, _totalTime, _max, _min );
+  }
+  else if( _m == EASE_OUT_QUART )
+  {
+    return OutQuart( _t, _totalTime, _max, _min );
+  }
+  else if( _m == EASE_INOUT_QUART )
+  {
+    return InOutQuart( _t, _totalTime, _max, _min );
+  }
+  
+  // Quint
+  else if( _m == EASE_IN_QUINT )
+  {
+    return InQuint( _t, _totalTime, _max, _min );
+  }
+  else if( _m == EASE_OUT_QUINT )
+  {
+    return OutQuint( _t, _totalTime, _max, _min );
+  }
+  else if( _m == EASE_INOUT_QUINT )
+  {
+    return InOutQuint( _t, _totalTime, _max, _min );
+  }
+  
+  // Sine
+  else if( _m == EASE_IN_SINE )
+  {
+    return InSine( _t, _totalTime, _max, _min );
+  }
+  else if( _m == EASE_OUT_SINE )
+  {
+    return OutSine( _t, _totalTime, _max, _min );
+  }
+  else if( _m == EASE_INOUT_SINE )
+  {
+    return InOutSine( _t, _totalTime, _max, _min );
+  }
+  
+  // Expo
+  else if( _m == EASE_IN_EXPO )
+  {
+    return InExpo( _t, _totalTime, _max, _min );
+  }
+  else if( _m == EASE_OUT_EXPO )
+  {
+    return OutExpo( _t, _totalTime, _max, _min );
+  }
+  else if( _m == EASE_INOUT_EXPO )
+  {
+    return InOutExpo( _t, _totalTime, _max, _min );
+  }
+  
+  // Circ
+  else if( _m == EASE_IN_CIRC )
+  {
+    return InCirc( _t, _totalTime, _max, _min );
+  }
+  else if( _m == EASE_OUT_CIRC )
+  {
+    return OutCirc( _t, _totalTime, _max, _min );
+  }
+  else if( _m == EASE_INOUT_CIRC )
+  {
+    return InOutCirc( _t, _totalTime, _max, _min );
+  }
+  
+  // Elastic
+  else if( _m == EASE_IN_ELASTIC )
+  {
+    return InElastic( _t, _totalTime, _max, _min );
+  }
+  else if( _m == EASE_OUT_ELASTIC )
+  {
+    return OutElastic( _t, _totalTime, _max, _min );
+  }
+  else if( _m == EASE_INOUT_ELASTIC )
+  {
+    return InOutElastic( _t, _totalTime, _max, _min );
+  }
+  
+  // Back
+  else if( _m == EASE_IN_BACK )
+  {
+    return InBack( _t, _totalTime, _max, _min, 1.70158 );
+  }
+  else if( _m == EASE_OUT_BACK )
+  {
+    return OutBack( _t, _totalTime, _max, _min, 1.70158 );
+  }
+  else if( _m == EASE_INOUT_BACK )
+  {
+    return InOutBack( _t, _totalTime, _max, _min, 1.70158 );
+  }
+  
+  // Bounce
+  else if( _m == EASE_IN_BOUNCE )
+  {
+    return InBounce( _t, _totalTime, _max, _min );
+  }
+  else if( _m == EASE_OUT_BOUNCE )
+  {
+    return OutBounce( _t, _totalTime, _max, _min );
+  }
+  else if( _m == EASE_INOUT_BOUNCE )
+  {
+    return InOutBounce( _t, _totalTime, _max, _min );
+  }
+  
+  // Linear
+  else if( _m == EASE_LINEAR )
+  {
+    return Linear( _t, _totalTime, _max, _min );
+  }
 }
 
 
-// Quad
-double Easing::InQuad( double t, double totaltime, double max, double min )
+
+// InQuad
+//----------------------------------------
+float Easing::InQuad( float _t, float _totalTime, float _max, float _min )
 {
-    max -= min;
-    t   /= totaltime;
-    return max * ( t * t ) + min;
+  _max -= _min;
+  _t   /= _totalTime;
+  return _max * ( _t * _t ) + _min;
 }
 
-double Easing::OutQuad( double t, double totaltime, double max, double min )
+// OutQuad
+//----------------------------------------
+float Easing::OutQuad( float _t, float _totalTime, float _max, float _min )
 {
-    max -= min;
-    t   /= totaltime;
-    return -max * ( t * ( t - 2 ) ) + min;
+  _max -= _min;
+  _t   /= _totalTime;
+  return -_max * ( _t * ( _t - 2 ) ) + _min;
 }
 
-double Easing::InOutQuad( double t, double totaltime, double max, double min )
+// InOutQuad
+//----------------------------------------
+float Easing::InOutQuad( float _t, float _totalTime, float _max, float _min )
 {
-    max -= min;
-    t   /= totaltime;
-    
-    if( ( t / 2 ) < 1 )
-    {
-        return ( ( ( max / 2 ) * ( t * t ) ) + min ) * 2;
-    }
-    
-    --t;
-    return ( -max * ( t * ( t - 2 ) - 1 ) + min ) * 2;
-}
-
-
-// Cubic
-double Easing::InCubic( double t, double totaltime, double max, double min )
-{
-    max -= min;
-    t   /= totaltime;
-    return max * ( t * t * t ) + min;
-}
-
-double Easing::OutCubic( double t, double totaltime, double max, double min )
-{
-    max -= min;
-    t    = ( t / totaltime ) - 1;
-    return max * ( ( t * t * t ) + 1 ) + min;
-}
-
-double Easing::InOutCubic( double t, double totaltime, double max, double min )
-{
-    max -= min;
-    t   /= totaltime / 2;
-    
-    if( t < 1 )
-    {
-        return ( max / 2 ) * ( t * t * t ) + min;
-    }
-    
-    t -= 2;
-    return ( max / 2 ) * ( ( t * t * t ) + 2 ) + min;
+  _max -= _min;
+  _t   /= _totalTime;
+  
+  if( ( _t / 2 ) < 1 )
+  {
+    return ( ( ( _max / 2 ) * ( _t * _t ) ) + _min ) * 2;
+  }
+  
+  --_t;
+  return ( -_max * ( _t * ( _t - 2 ) - 1 ) + _min ) * 2;
 }
 
 
-// Quart
-double Easing::InQuart( double t, double totaltime, double max, double min )
+
+// InCubic
+//----------------------------------------
+float Easing::InCubic( float _t, float _totalTime, float _max, float _min )
 {
-    max -= min;
-    t   /= totaltime;
-    return max * ( t * t * t * t ) + min;
+  _max -= _min;
+  _t   /= _totalTime;
+  return _max * ( _t * _t * _t ) + _min;
 }
 
-double Easing::OutQuart( double t, double totaltime, double max, double min )
+// OutCubic
+//----------------------------------------
+float Easing::OutCubic( float _t, float _totalTime, float _max, float _min )
 {
-    max -= min;
-    t    = ( t / totaltime ) - 1;
-    return -max * ( ( t * t * t * t ) - 1 ) + min;
+  _max -= _min;
+  _t    = ( _t / _totalTime ) - 1;
+  return _max * ( ( _t * _t * _t ) + 1 ) + _min;
 }
 
-double Easing::InOutQuart( double t, double totaltime, double max, double min )
+// InOutCubic
+//----------------------------------------
+float Easing::InOutCubic( float _t, float _totalTime, float _max, float _min )
 {
-    max -= min;
-    t   /= totaltime / 2;
-    
-    if( t < 1 )
-    {
-        return ( max / 2 ) * ( t * t * t * t ) + min;
-    }
-    
-    t -= 2;
-    return -( max / 2 ) * ( ( t * t * t * t ) - 2 ) + min;
-}
-
-
-// Quint
-double Easing::InQuint( double t, double totaltime, double max, double min )
-{
-    max -= min;
-    t   /= totaltime;
-    return ( max * ( t * t * t * t * t ) ) + min;
-}
-
-double Easing::OutQuint( double t, double totaltime, double max, double min )
-{
-    max -= min;
-    t    = ( t / totaltime ) - 1;
-    return max * ( ( t * t * t * t * t ) + 1 ) + min;
-}
-
-double Easing::InOutQuint( double t, double totaltime, double max, double min )
-{
-    max -= min;
-    t   /= totaltime / 2;
-    
-    if( t < 1 )
-    {
-        return ( max / 2 ) * ( t * t * t * t * t ) + min;
-    }
-    
-    t -= 2;
-    return ( max / 2 ) * ( ( t * t * t * t * t ) + 2 ) + min;
+  _max -= _min;
+  _t   /= _totalTime / 2;
+  
+  if( _t < 1 )
+  {
+    return ( _max / 2 ) * ( _t * _t * _t ) + _min;
+  }
+  
+  _t -= 2;
+  return ( _max / 2 ) * ( ( _t * _t * _t ) + 2 ) + _min;
 }
 
 
-// Sine
-double Easing::InSine( double t, double totaltime, double max, double min )
+
+// InQuart
+//----------------------------------------
+float Easing::InQuart( float _t, float _totalTime, float _max, float _min )
 {
-    max -= min;
-    return -max * cos( t * HALF_PI / totaltime ) + max + min;
+  _max -= _min;
+  _t   /= _totalTime;
+  return _max * ( _t * _t * _t * _t ) + _min;
 }
 
-double Easing::OutSine( double t, double totaltime, double max, double min )
+// OutQuart
+//----------------------------------------
+float Easing::OutQuart( float _t, float _totalTime, float _max, float _min )
 {
-    max -= min;
-    return max * sin( t * HALF_PI / totaltime ) + min;
+  _max -= _min;
+  _t    = ( _t / _totalTime ) - 1;
+  return -_max * ( ( _t * _t * _t * _t ) - 1 ) + _min;
 }
 
-double Easing::InOutSine( double t, double totaltime, double max, double min )
+// InOutQuart
+//----------------------------------------
+float Easing::InOutQuart( float _t, float _totalTime, float _max, float _min )
 {
-    max -= min;
-    return -( max / 2 ) * ( cos( t * PI / totaltime ) - 1 ) + min;
-}
-
-
-// Expo
-double Easing::InExpo( double t, double totaltime, double max, double min )
-{
-    max -= min;
-    return ( t == 0.0 ) ? min : max * pow( 2, 10 * ( t / totaltime - 1 ) ) + min;
-}
-
-double Easing::OutExpo( double t, double totaltime, double max, double min )
-{
-    max -= min;
-    return ( t == totaltime ) ? max + min : max * ( -pow( 2, -10 * t / totaltime ) + 1 ) + min;
-}
-
-double Easing::InOutExpo( double t, double totaltime, double max, double min )
-{
-    if( t == 0.0 )
-    {
-        return min;
-    }
-    if( t == totaltime )
-    {
-        return max;
-    }
-    
-    max -= min;
-    t   /= totaltime / 2;
-    
-    if( t < 1 )
-    {
-        return ( max / 2 ) * pow( 2, 10 * ( t - 1 ) ) + min;
-    }
-    
-    --t;
-    return ( max / 2 ) * ( -pow( 2, -10 * t ) + 2 ) + min;
+  _max -= _min;
+  _t   /= _totalTime / 2;
+  
+  if( _t < 1 )
+  {
+    return ( _max / 2 ) * ( _t * _t * _t * _t ) + _min;
+  }
+  
+  _t -= 2;
+  return -( _max / 2 ) * ( ( _t * _t * _t * _t ) - 2 ) + _min;
 }
 
 
-// Circ
-double Easing::InCirc( double t, double totaltime, double max, double min )
+
+// InQuint
+//----------------------------------------
+float Easing::InQuint( float _t, float _totalTime, float _max, float _min )
 {
-    max -= min;
-    t   /= totaltime;
-    return -max * ( sqrt( 1 - ( t * t ) ) - 1 ) + min;
+  _max -= _min;
+  _t   /= _totalTime;
+  return ( _max * ( _t * _t * _t * _t * _t ) ) + _min;
 }
 
-double Easing::OutCirc( double t, double totaltime, double max, double min )
+// OutQuint
+//----------------------------------------
+float Easing::OutQuint( float _t, float _totalTime, float _max, float _min )
 {
-    max -= min;
-    t    = ( t / totaltime ) - 1;
-    return max * sqrt( 1 - ( t * t ) ) + min;
+  _max -= _min;
+  _t    = ( _t / _totalTime ) - 1;
+  return _max * ( ( _t * _t * _t * _t * _t ) + 1 ) + _min;
 }
 
-double Easing::InOutCirc( double t, double totaltime, double max, double min )
+// InOutQuint
+//----------------------------------------
+float Easing::InOutQuint( float _t, float _totalTime, float _max, float _min )
 {
-    max -= min;
-    t   /= totaltime / 2;
-    
-    if( t < 1 )
-    {
-        return -( max / 2 ) * ( sqrt( 1 - t * t ) - 1 ) + min;
-    }
-    
-    t -= 2;
-    return ( max / 2 ) * ( sqrt( 1 - t * t ) + 1 ) + min;
-}
-
-
-// Elastic
-double Easing::InElastic( double t, double totaltime, double max, double min )
-{
-    double s;
-    double p = totaltime * 0.3;
-    double a = max;
-    
-    if( t == 0 )
-    {
-        return min;
-    }
-    
-    t /= totaltime;
-    
-    if( t == 1 )
-    {
-        return min + max;
-    }
-    
-    if( a < abs( max ) )
-    {
-        a = max;
-        s = p / 4;
-    }
-    else
-    {
-        s = p / ( 2 * PI ) * asin( max / a );
-    }
-    
-    t -= 1;
-    
-    return -( a * pow( 2, 10 * t ) * sin( ( ( t * totaltime ) - s ) * ( 2 * PI ) / p ) ) + min;
-}
-
-double Easing::OutElastic( double t, double totaltime, double max, double min )
-{
-    double s;
-    double p = totaltime * 0.3;
-    double a = max;
-    
-    if( t == 0 )
-    {
-        return min;
-    }
-    
-    t /= totaltime;
-    
-    if( t == 1 )
-    {
-        return min + max;
-    }
-    
-    if( a < abs( max ) )
-    {
-        a = max;
-        s = p / 4;
-    }
-    else
-    {
-        s = p / ( 2 * PI ) * asin( max / a );
-    }
-    
-    return a * pow( 2, -10 * t ) * sin( ( ( t * totaltime ) - s ) * ( 2 * PI ) / p ) + max + min;
-}
-
-double Easing::InOutElastic( double t, double totaltime, double max, double min )
-{
-    double s;
-    double p = totaltime * 0.3 * 1.5;
-    double a = max;
-    
-    if( t == 0 )
-    {
-        return min;
-    }
-    
-    t /= totaltime / 2;
-    
-    if( t == 2 )
-    {
-        return min + max;
-    }
-    
-    if( a < abs( max ) )
-    {
-        a = max;
-        s = p / 4;
-    }
-    else
-    {
-        s = p / ( 2 * PI ) * asin( max / a );
-    }
-    
-    if( t < 1 )
-    {
-        t -= 1;
-        return -0.5 * ( a * pow( 2, 10 * t ) * sin( ( ( t * totaltime ) - s ) * ( ( 2 * PI ) / p ) ) ) + min;
-    }
-    
-    t -= 1;
-    
-    return a * pow( 2, -10 * t ) * sin( ( ( t * totaltime ) - s ) * ( ( 2 * PI ) / p ) ) * 0.5 + max + min;
+  _max -= _min;
+  _t   /= _totalTime / 2;
+  
+  if( _t < 1 )
+  {
+    return ( _max / 2 ) * ( _t * _t * _t * _t * _t ) + _min;
+  }
+  
+  _t -= 2;
+  return ( _max / 2 ) * ( ( _t * _t * _t * _t * _t ) + 2 ) + _min;
 }
 
 
-// Back
-double Easing::InBack( double t, double totaltime, double max, double min, double s )
+
+// InSine
+//----------------------------------------
+float Easing::InSine( float _t, float _totalTime, float _max, float _min )
 {
-    max -= min;
-    t   /= totaltime;
-    
-    return max * t * t * ( ( ( s + 1 ) * t ) - s ) + min;
+  _max -= _min;
+  return -_max * cos( _t * HALF_PI / _totalTime ) + _max + _min;
 }
 
-double Easing::OutBack( double t, double totaltime, double max, double min, double s )
+// OutSine
+//----------------------------------------
+float Easing::OutSine( float _t, float _totalTime, float _max, float _min )
 {
-    max -= min;
-    t    = ( t / totaltime ) - 1;
-    
-    return max * ( t * t * ( ( s + 1 ) * t + s ) + 1 ) + min;
+  _max -= _min;
+  return _max * sin( _t * HALF_PI / _totalTime ) + _min;
 }
 
-double Easing::InOutBack( double t, double totaltime, double max, double min, double s )
+// InOutSine
+//----------------------------------------
+float Easing::InOutSine( float _t, float _totalTime, float _max, float _min )
 {
-    max -= min;
-    s   *= 1.525;
-    t   /= totaltime / 2;
-    
-    if( t < 1 )
-    {
-        return ( max / 2 ) * ( t * t * ( ( s + 1 ) * t - s ) ) + min;
-    }
-    
-    t -= 2;
-    
-    return ( max / 2 ) * ( t * t * ( ( s + 1 ) * t + s ) + 2 ) + min;
+  _max -= _min;
+  return -( _max / 2 ) * ( cos( _t * PI / _totalTime ) - 1 ) + _min;
 }
 
 
-// Bounce
-double Easing::InBounce( double t, double totaltime, double max, double min )
+
+// InExpo
+//----------------------------------------
+float Easing::InExpo( float _t, float _totalTime, float _max, float _min )
 {
-    return max - OutBounce( totaltime - t , totaltime , max - min , 0 ) + min;
+  _max -= _min;
+  return ( _t == 0.0 ) ? _min : _max * pow( 2, 10 * ( _t / _totalTime - 1 ) ) + _min;
 }
 
-double Easing::OutBounce( double t, double totaltime, double max, double min )
+// OutExpo
+//----------------------------------------
+float Easing::OutExpo( float _t, float _totalTime, float _max, float _min )
 {
-    max -= min;
-    t   /= totaltime;
-    
-    if( t < ( 1. / 2.75 ) )
-    {
-        return max * ( 7.5625 * t * t ) + min;
-    }
-    else if( t < ( 2. / 2.75 ) )
-    {
-        t -= 1.5 / 2.75;
-        return max * ( ( 7.5625 * t * t ) + 0.75 ) + min;
-    }
-    else if( t < ( 2.5 / 2.75 ) )
-    {
-        t -= 2.25 / 2.75;
-        return max * ( ( 7.5625 * t * t ) + 0.9375 ) + min;
-    }
-    else
-    {
-        t -= 2.625 / 2.75;
-        return max * ( ( 7.5625 * t * t ) + 0.984375 ) + min;
-    }
+  _max -= _min;
+  return ( _t == _totalTime ) ? _max + _min : _max * ( -pow( 2, -10 * _t / _totalTime ) + 1 ) + _min;
 }
 
-double Easing::InOutBounce( double t, double totaltime, double max, double min )
+// InOutExpo
+//----------------------------------------
+float Easing::InOutExpo( float _t, float _totalTime, float _max, float _min )
 {
-    if( t < ( totaltime / 2 ) )
-    {
-        return InBounce( t * 2, totaltime, max - min, 0 ) * 0.5 + min;
-    }
-    else
-    {
-        return OutBounce( t * 2 - totaltime, totaltime, max - min, 0 ) * 0.5 + min + ( max - min ) * 0.5;
-    }
+  if( _t == 0.0 )
+  {
+    return _min;
+  }
+  if( _t == _totalTime )
+  {
+    return _max;
+  }
+  
+  _max -= _min;
+  _t   /= _totalTime / 2;
+  
+  if( _t < 1 )
+  {
+    return ( _max / 2 ) * pow( 2, 10 * ( _t - 1 ) ) + _min;
+  }
+  
+  --_t;
+  return ( _max / 2 ) * ( -pow( 2, -10 * _t ) + 2 ) + _min;
 }
+
+
+
+// InCirc
+//----------------------------------------
+float Easing::InCirc( float _t, float _totalTime, float _max, float _min )
+{
+  _max -= _min;
+  _t   /= _totalTime;
+  return -_max * ( sqrt( 1 - ( _t * _t ) ) - 1 ) + _min;
+}
+
+// OutCirc
+//----------------------------------------
+float Easing::OutCirc( float _t, float _totalTime, float _max, float _min )
+{
+  _max -= _min;
+  _t    = ( _t / _totalTime ) - 1;
+  return _max * sqrt( 1 - ( _t * _t ) ) + _min;
+}
+
+// InOutCirc
+//----------------------------------------
+float Easing::InOutCirc( float _t, float _totalTime, float _max, float _min )
+{
+  _max -= _min;
+  _t   /= _totalTime / 2;
+  
+  if( _t < 1 )
+  {
+    return -( _max / 2 ) * ( sqrt( 1 - _t * _t ) - 1 ) + _min;
+  }
+  
+  _t -= 2;
+  return ( _max / 2 ) * ( sqrt( 1 - _t * _t ) + 1 ) + _min;
+}
+
+
+
+// InElastic
+//----------------------------------------
+float Easing::InElastic( float _t, float _totalTime, float _max, float _min )
+{
+  float s;
+  float p = _totalTime * 0.3;
+  float a = _max;
+  
+  if( _t == 0 )
+  {
+    return _min;
+  }
+  
+  _t /= _totalTime;
+  
+  if( _t == 1 )
+  {
+    return _min + _max;
+  }
+  
+  if( a < abs( _max ) )
+  {
+    a = _max;
+    s = p / 4;
+  }
+  else
+  {
+    s = p / ( 2 * PI ) * asin( _max / a );
+  }
+  
+  _t -= 1;
+  
+  return -( a * pow( 2, 10 * _t ) * sin( ( ( _t * _totalTime ) - s ) * ( 2 * PI ) / p ) ) + _min;
+}
+
+// OutElastic
+//----------------------------------------
+float Easing::OutElastic( float _t, float _totalTime, float _max, float _min )
+{
+  float s;
+  float p = _totalTime * 0.3;
+  float a = _max;
+  
+  if( _t == 0 )
+  {
+    return _min;
+  }
+  
+  _t /= _totalTime;
+  
+  if( _t == 1 )
+  {
+    return _min + _max;
+  }
+  
+  if( a < abs( _max ) )
+  {
+    a = _max;
+    s = p / 4;
+  }
+  else
+  {
+    s = p / ( 2 * PI ) * asin( _max / a );
+  }
+  
+  return a * pow( 2, -10 * _t ) * sin( ( ( _t * _totalTime ) - s ) * ( 2 * PI ) / p ) + _max + _min;
+}
+
+// InOutElastic
+//----------------------------------------
+float Easing::InOutElastic( float _t, float _totalTime, float _max, float _min )
+{
+  float s;
+  float p = _totalTime * 0.3 * 1.5;
+  float a = _max;
+  
+  if( _t == 0 )
+  {
+    return _min;
+  }
+  
+  _t /= _totalTime / 2;
+  
+  if( _t == 2 )
+  {
+    return _min + _max;
+  }
+  
+  if( a < abs( _max ) )
+  {
+    a = _max;
+    s = p / 4;
+  }
+  else
+  {
+    s = p / ( 2 * PI ) * asin( _max / a );
+  }
+  
+  if( _t < 1 )
+  {
+    _t -= 1;
+    return -0.5 * ( a * pow( 2, 10 * _t ) * sin( ( ( _t * _totalTime ) - s ) * ( ( 2 * PI ) / p ) ) ) + _min;
+  }
+  
+  _t -= 1;
+  
+  return a * pow( 2, -10 * _t ) * sin( ( ( _t * _totalTime ) - s ) * ( ( 2 * PI ) / p ) ) * 0.5 + _max + _min;
+}
+
+
+
+// InBack
+//----------------------------------------
+float Easing::InBack( float _t, float _totalTime, float _max, float _min, float s )
+{
+  _max -= _min;
+  _t   /= _totalTime;
+  
+  return _max * _t * _t * ( ( ( s + 1 ) * _t ) - s ) + _min;
+}
+
+// OutBack
+//----------------------------------------
+float Easing::OutBack( float _t, float _totalTime, float _max, float _min, float s )
+{
+  _max -= _min;
+  _t    = ( _t / _totalTime ) - 1;
+  
+  return _max * ( _t * _t * ( ( s + 1 ) * _t + s ) + 1 ) + _min;
+}
+
+// InOutBack
+//----------------------------------------
+float Easing::InOutBack( float _t, float _totalTime, float _max, float _min, float s )
+{
+  _max -= _min;
+  s   *= 1.525;
+  _t   /= _totalTime / 2;
+  
+  if( _t < 1 )
+  {
+    return ( _max / 2 ) * ( _t * _t * ( ( s + 1 ) * _t - s ) ) + _min;
+  }
+  
+  _t -= 2;
+  
+  return ( _max / 2 ) * ( _t * _t * ( ( s + 1 ) * _t + s ) + 2 ) + _min;
+}
+
+
+
+// InBounce
+//----------------------------------------
+float Easing::InBounce( float _t, float _totalTime, float _max, float _min )
+{
+  return _max - OutBounce( _totalTime - _t , _totalTime , _max - _min , 0 ) + _min;
+}
+
+// OutBounce
+//----------------------------------------
+float Easing::OutBounce( float _t, float _totalTime, float _max, float _min )
+{
+  _max -= _min;
+  _t   /= _totalTime;
+  
+  if( _t < ( 1. / 2.75 ) )
+  {
+    return _max * ( 7.5625 * _t * _t ) + _min;
+  }
+  else if( _t < ( 2. / 2.75 ) )
+  {
+    _t -= 1.5 / 2.75;
+    return _max * ( ( 7.5625 * _t * _t ) + 0.75 ) + _min;
+  }
+  else if( _t < ( 2.5 / 2.75 ) )
+  {
+    _t -= 2.25 / 2.75;
+    return _max * ( ( 7.5625 * _t * _t ) + 0.9375 ) + _min;
+  }
+  else
+  {
+    _t -= 2.625 / 2.75;
+    return _max * ( ( 7.5625 * _t * _t ) + 0.984375 ) + _min;
+  }
+}
+
+// InOutBounce
+//----------------------------------------
+float Easing::InOutBounce( float _t, float _totalTime, float _max, float _min )
+{
+  if( _t < ( _totalTime / 2 ) )
+  {
+    return InBounce( _t * 2, _totalTime, _max - _min, 0 ) * 0.5 + _min;
+  }
+  else
+  {
+    return OutBounce( _t * 2 - _totalTime, _totalTime, _max - _min, 0 ) * 0.5 + _min + ( _max - _min ) * 0.5;
+  }
+}
+
 
 
 // Linear
-double Easing::Linear( double t, double totaltime, double max, double min )
+//----------------------------------------
+float Easing::Linear( float _t, float _totalTime, float _max, float _min )
 {
-    return ( max - min ) * t / totaltime + min;
+  return ( _max - _min ) * _t / _totalTime + _min;
 }
