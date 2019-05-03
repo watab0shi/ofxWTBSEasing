@@ -1,6 +1,5 @@
-
-
 #include "ofxWTBSEasing.h"
+#include "ofMath.h"
 
 
 // easing
@@ -154,8 +153,6 @@ float Easing::easing( easingMode _m, float _t, float _totalTime, float _max, flo
   }
 }
 
-
-
 // InQuad
 //----------------------------------------
 float Easing::InQuad( float _t, float _totalTime, float _max, float _min )
@@ -189,8 +186,6 @@ float Easing::InOutQuad( float _t, float _totalTime, float _max, float _min )
   --_t;
   return ( -_max * ( _t * ( _t - 2 ) - 1 ) + _min ) * 2;
 }
-
-
 
 // InCubic
 //----------------------------------------
@@ -226,8 +221,6 @@ float Easing::InOutCubic( float _t, float _totalTime, float _max, float _min )
   return ( _max / 2 ) * ( ( _t * _t * _t ) + 2 ) + _min;
 }
 
-
-
 // InQuart
 //----------------------------------------
 float Easing::InQuart( float _t, float _totalTime, float _max, float _min )
@@ -261,8 +254,6 @@ float Easing::InOutQuart( float _t, float _totalTime, float _max, float _min )
   _t -= 2;
   return -( _max / 2 ) * ( ( _t * _t * _t * _t ) - 2 ) + _min;
 }
-
-
 
 // InQuint
 //----------------------------------------
@@ -298,8 +289,6 @@ float Easing::InOutQuint( float _t, float _totalTime, float _max, float _min )
   return ( _max / 2 ) * ( ( _t * _t * _t * _t * _t ) + 2 ) + _min;
 }
 
-
-
 // InSine
 //----------------------------------------
 float Easing::InSine( float _t, float _totalTime, float _max, float _min )
@@ -323,8 +312,6 @@ float Easing::InOutSine( float _t, float _totalTime, float _max, float _min )
   _max -= _min;
   return -( _max / 2 ) * ( cos( _t * PI / _totalTime ) - 1 ) + _min;
 }
-
-
 
 // InExpo
 //----------------------------------------
@@ -367,8 +354,6 @@ float Easing::InOutExpo( float _t, float _totalTime, float _max, float _min )
   return ( _max / 2 ) * ( -pow( 2, -10 * _t ) + 2 ) + _min;
 }
 
-
-
 // InCirc
 //----------------------------------------
 float Easing::InCirc( float _t, float _totalTime, float _max, float _min )
@@ -402,8 +387,6 @@ float Easing::InOutCirc( float _t, float _totalTime, float _max, float _min )
   _t -= 2;
   return ( _max / 2 ) * ( sqrt( 1 - _t * _t ) + 1 ) + _min;
 }
-
-
 
 // InElastic
 //----------------------------------------
@@ -514,8 +497,6 @@ float Easing::InOutElastic( float _t, float _totalTime, float _max, float _min )
   return a * pow( 2, -10 * _t ) * sin( ( ( _t * _totalTime ) - s ) * ( ( 2 * PI ) / p ) ) * 0.5 + _max + _min;
 }
 
-
-
 // InBack
 //----------------------------------------
 float Easing::InBack( float _t, float _totalTime, float _max, float _min, float s )
@@ -553,8 +534,6 @@ float Easing::InOutBack( float _t, float _totalTime, float _max, float _min, flo
   
   return ( _max / 2 ) * ( _t * _t * ( ( s + 1 ) * _t + s ) + 2 ) + _min;
 }
-
-
 
 // InBounce
 //----------------------------------------
@@ -604,8 +583,6 @@ float Easing::InOutBounce( float _t, float _totalTime, float _max, float _min )
     return OutBounce( _t * 2 - _totalTime, _totalTime, _max - _min, 0 ) * 0.5 + _min + ( _max - _min ) * 0.5;
   }
 }
-
-
 
 // Linear
 //----------------------------------------

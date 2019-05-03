@@ -1,8 +1,4 @@
-
 #pragma once
-
-#include "ofMain.h"
-
 
 #define NUM_EASINGS 31
 
@@ -13,7 +9,7 @@ namespace Easing
 {
   enum easingMode
   {
-    EASE_IN_QUAD = 0,
+    EASE_IN_QUAD,
     EASE_OUT_QUAD,
     EASE_INOUT_QUAD,
     
@@ -63,60 +59,50 @@ namespace Easing
   float OutQuad( float t, float totaltime, float max = 1.0, float min = 0.0 );
   float InOutQuad( float t, float totaltime, float max = 1.0, float min = 0.0 );
   
-  
   // Cubic
   float InCubic( float t, float totaltime, float max = 1.0, float min = 0.0 );
   float OutCubic( float t, float totaltime, float max = 1.0, float min = 0.0 );
   float InOutCubic( float t, float totaltime, float max = 1.0, float min = 0.0 );
-  
   
   // Quart
   float InQuart( float t, float totaltime, float max = 1.0, float min = 0.0 );
   float OutQuart( float t, float totaltime, float max = 1.0, float min = 0.0 );
   float InOutQuart( float t, float totaltime, float max = 1.0, float min = 0.0 );
   
-  
   // Quint
   float InQuint( float t, float totaltime, float max = 1.0, float min = 0.0 );
   float OutQuint( float t, float totaltime, float max = 1.0, float min = 0.0 );
   float InOutQuint( float t, float totaltime, float max = 1.0, float min = 0.0 );
-  
   
   // Sine
   float InSine( float t, float totaltime, float max = 1.0, float min = 0.0 );
   float OutSine( float t, float totaltime, float max = 1.0, float min = 0.0 );
   float InOutSine( float t, float totaltime, float max = 1.0, float min = 0.0 );
   
-  
   // Expo
   float InExpo( float t, float totaltime, float max = 1.0, float min = 0.0 );
   float OutExpo( float t, float totaltime, float max = 1.0, float min = 0.0 );
   float InOutExpo( float t, float totaltime, float max = 1.0, float min = 0.0 );
-  
   
   // Circ
   float InCirc( float t, float totaltime, float max = 1.0, float min = 0.0 );
   float OutCirc( float t, float totaltime, float max = 1.0, float min = 0.0 );
   float InOutCirc( float t, float totaltime, float max = 1.0, float min = 0.0 );
   
-  
   // Elastic
   float InElastic( float t, float totaltime, float max = 1.0, float min = 0.0 );
   float OutElastic( float t, float totaltime, float max = 1.0, float min = 0.0 );
   float InOutElastic( float t, float totaltime, float max = 1.0, float min = 0.0 );
-  
   
   // Back
   float InBack( float t, float totaltime, float max, float min, float s );
   float OutBack( float t, float totaltime, float max, float min, float s );
   float InOutBack( float t, float totaltime, float max, float min, float s );
   
-  
   // Bounce
   float InBounce( float t, float totaltime, float max = 1.0, float min = 0.0 );
   float OutBounce( float t, float totaltime, float max = 1.0, float min = 0.0 );
   float InOutBounce( float t, float totaltime, float max = 1.0, float min = 0.0 );
-  
   
   // Linear
   float Linear( float t, float totaltime, float max = 1.0, float min = 0.0 );
